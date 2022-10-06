@@ -1,2 +1,2 @@
 # optionals-demo
-optionals functionl lambdas demo
+optionals functional lambdas demo

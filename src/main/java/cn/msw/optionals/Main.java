@@ -19,6 +19,10 @@ public class Main {
             System.out.println("email not provided");
         }
 
+        String creator = null;
+        creator = Optional.ofNullable(creator).orElse("unknown");
+        System.out.println(creator);
+
     }
 }
 

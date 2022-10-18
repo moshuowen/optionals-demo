@@ -5,6 +5,7 @@ import java.util.Objects;
 /**
  * @author moshu
  */
+@SuppressWarnings("unused")
 public class EmployeeClass {
 
     private final String name;

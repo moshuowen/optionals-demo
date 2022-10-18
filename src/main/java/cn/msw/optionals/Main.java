@@ -19,6 +19,10 @@ public class Main {
             System.out.println("email not provided");
         }
 
+        String valueName = null;
+        String admin = Optional.ofNullable(valueName).orElse("admin");
+        System.out.println(admin);
+
     }
 }
 

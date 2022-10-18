@@ -36,6 +36,7 @@ class Person {
         this.email = email;
     }
 
+    @SuppressWarnings("unused")
     public String getName() {
         return name;
     }

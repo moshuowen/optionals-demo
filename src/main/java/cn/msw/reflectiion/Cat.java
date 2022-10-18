@@ -3,6 +3,7 @@ package cn.msw.reflectiion;
 /**
  * @author moshu
  */
+@SuppressWarnings("unused")
 public class Cat {
 
     private final String name;

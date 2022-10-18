@@ -2,6 +2,7 @@ package cn.msw.annotations;
 
 
 @VeryImportant
+@SuppressWarnings("unused")
 public class Cat {
 
     @ImportantString

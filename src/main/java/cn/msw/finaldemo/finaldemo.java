@@ -7,8 +7,9 @@ public class finaldemo {
     }
 
 
-    protected void handleLog(final String a, final String b) {
+    protected void handleLog(final String a, String b) {
         // 无法将值赋给 final 变量 'a'
         //  a  = "a";
+        b = "b";
     }
 }

@@ -10,11 +10,13 @@ public class RegExp01
 
     public static void main(String[] args) {
 
-        String content = "a1bcA1B2C";
+        String content = "a1bcA1B2C ! @";
         // [^a-zA-Z] 匹配除了a-z和A-Z之外的所有字符
 //        Pattern compile = compile("[^\\d]");
         // [abcd] 匹配abcd中的任意一个字符, [\D] 匹配非数字
-        Pattern compile = compile("[\\D]");
+//        Pattern compile = compile("[\\D]");
+        // . 匹配除了换行符之外的任意字符
+        Pattern compile = compile(".");
 //        Pattern compile = compile("(?i)abc");
         // (?i)abc  (?i)表示忽略大小写, a((?i)b)c 表示abc aBc都可以匹配,CASE_INSENSITIVE 也可以表示忽略大小写
 //        Pattern compile = compile("a((?i)b)c", CASE_INSENSITIVE);

@@ -34,7 +34,8 @@ build/
 ### Mac OS ###
 .DS_Store
 
+target
 
 git rm -r --cached .
 git add .
-git commit -m “update .gitignore”
+git commit -m "update .gitignore"

@@ -227,19 +227,21 @@ public class Main {
                 "from dual\n";
         String[] union_alls = sql.split("union all");
         String sql1 = union_alls[0];
+        System.out.println(union_alls.length);
 //        Matcher matcher1 = compile("select '(\\S*)' as \"name\"").matcher(sql1);
 //        Matcher matcher2 = compile("'(\\S*)' as \"queryIndex\"").matcher(sql1);
 //        Matcher matcher2 = compile("\\(+(\\S*)+\\) as \"count\"").matcher(sql1);
         for (int i = 0; i < union_alls.length; i++) {
-//            Matcher matcher1 = compile("'(\\S*)' as \"name\"").matcher(union_alls[i]);
+            Matcher matcher1 = compile("'(\\S*)' as \"name\"").matcher(union_alls[i]);
 //            \\S 匹配任何非空白字符。等价于 [^ \\f\\n\\r\\t\\v]。
-            Matcher matcher1 = compile("\\(+(\\S*)\\)+ as \"count\"").matcher(union_alls[i]);
-            Matcher matcher2 = compile("'(\\S*)' as \"queryIndex\"").matcher(union_alls[i]);
-            Matcher matcher3 = compile("'(\\S*)' as \"queryParam\"").matcher(union_alls[i]);
-            while (matcher1.find() && matcher2.find() && matcher3.find()) {
-                System.out.print(matcher1.group(1)+"\t");
-                System.out.print(matcher2.group(1)+"\t");
-                System.out.print(matcher3.group(1));
+            Matcher matcher2 = compile("\\(?(\\S*)\\)+ as \"count\"").matcher(union_alls[i]);
+            Matcher matcher3 = compile("'(\\S*)' as \"queryIndex\"").matcher(union_alls[i]);
+            Matcher matcher4 = compile("'(\\S*)' as \"queryParam\"").matcher(union_alls[i]);
+            while (matcher1.find() && matcher2.find() && matcher3.find()&& matcher4.find()) {
+                System.out.print(i + " "+matcher1.group(1)+"\t");
+                System.out.print("count:" +matcher2.group(1)+"\t");
+                System.out.print("queryIndex:" +matcher3.group(1)+"\t");
+                System.out.print("queryParam:" +matcher4.group(1));
                 System.out.println();
             }
         }

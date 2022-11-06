@@ -232,7 +232,8 @@ public class Main {
 //        Matcher matcher2 = compile("\\(+(\\S*)+\\) as \"count\"").matcher(sql1);
         for (int i = 0; i < union_alls.length; i++) {
 //            Matcher matcher1 = compile("'(\\S*)' as \"name\"").matcher(union_alls[i]);
-            Matcher matcher1 = compile(",\n\\((.*\n)\\) as \"count\"").matcher(union_alls[i]);
+//            \\S 匹配任何非空白字符。等价于 [^ \\f\\n\\r\\t\\v]。
+            Matcher matcher1 = compile("\\((\\S*)\\)+ as \"count\"").matcher(union_alls[i]);
             Matcher matcher2 = compile("'(\\S*)' as \"queryIndex\"").matcher(union_alls[i]);
             Matcher matcher3 = compile("'(\\S*)' as \"queryParam\"").matcher(union_alls[i]);
             while (matcher1.find() && matcher2.find() && matcher3.find()) {

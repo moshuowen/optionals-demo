@@ -1,4 +1,4 @@
-package cn.msw;
+package cn.msw.lambda;
 
 public class stream {
 

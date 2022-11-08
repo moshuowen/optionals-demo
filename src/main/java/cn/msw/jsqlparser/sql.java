@@ -1,4 +1,4 @@
-package cn.msw.sql;
+package cn.msw.jsqlparser;
 
 public enum sql {
 
